@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Talent Hunt</title>
+  <style>
+    body{
+      font-family: arial,helvetica;
+      background:url('fonts/oqf6xR.jpg');
+      margin:0;
+      padding:0;
+
+    }
+    #main{
+      border: 0px solid black;
+      width:1100px;
+      background:transparent;
+      margin:0 auto;
+      box-shadow:5px 5px 10px black;
+    }
+    #header{
+
+      color:white;
+      height:100px;
+    }
+    #header h1{
+      padding:30px 0 0 10px;
+      text-shadow:4px 4px 5px red, 8px 8px orange;
+    }
+    #menu{
+      background:transparent;
+      font-size:20px;
+      font-weight:bold;
+    }
+    #menu ul{
+      margin:0;
+      padding:0;
+    }
+    #menu li{
+      display:inline-block;
+    }
+    #menu li a{
+      display:block;
+      padding:10px 10px;
+      text-decoration:none;
+      color:palegreen;
+    }
+    #menu li a:hover{
+      background:crimson;
+      color:white;
+    }
+    #content{
+      background:url('fonts/photo-1480714378408-67cf0d13bc1b.jpg');
+      width:800px;
+      float:left;
+      padding:10px;
+      box-sizing:border-box;
+      min-height:500px;
+    }
+
+    #content h2{
+      font-family:Franklin Gothic;
+      font-weight:bold;
+      color:mediumvioletred;
+    }
+
+    #content h2 span{
+      font-family:Franklin Gothic;
+      font-weight:bold;
+      color:#FF0033;
+    }
+
+    #content p1{
+      font-weight:bold;
+    }
+
+    #content p2{
+      font-weight:bold;
+    }
+
+    #content p3{
+      font-weight:bold;
+    }
+
+    #sidebar{
+          background:lightblue;
+          width:300px;
+          float:right;
+          min-height:500px;
+    }
+
+    #sidebar ul{
+      margin-left:30px;
+      padding:0;
+
+    }
+
+    #sidebar li{
+      display:inline-block;
+      width:200px;
+      height:50px;
+    }
+
+    #sidebar li a{
+      text-decoration:none;
+      color:black;
+      font-weight:bold;
+      display:block;
+      padding:10px 10px;
+    }
+    #sidebar li a:hover{
+      background:indigo;
+      color:white;
+    }
+
+    #about{
+      padding:10px 5px;
+      background:white;
+
+    }
+    #about h3{
+      color:gold;
+      margin-left:500px;
+      font-size:30px;
+      font-style:italic;
+      text-shadow:4px 4px 5px black;
+      text-decoration-line:underline;
+    }
+
+    #about p4{
+      margin-left:20px;
+      font-weight:bold;
+    }
+
+    #gallery{
+      height:300px;
+      padding:10px;
+      background:thistle;
+    }
+
+    #gallery h4{
+      text-align:center;
+      color:tomato;
+      margin-top: 2px;
+      font-size:30px;
+      font-style:italic;
+      text-shadow:4px 4px 5px black;
+      text-decoration-line:underline;
+    }
+
+    #gallery img{
+      width: 300px;
+      height: 200px;
+      margin-left: 40px;
+    }
+
+    #contact{
+      height: 220px;
+      background: url('fonts/hiring3.jpg');
+      background-position: right;
+      background-repeat: space;
+      padding: 10px;
+
+    }
+
+    #contact h5{
+      text-align:300px;
+      color:gold;
+      margin-top: 2px;
+      font-size:30px;
+      font-style:italic;
+      text-shadow:4px 4px 5px black;
+      text-decoration-line:underline;
+    }
+
+    #contact h6{
+      margin-left: 10px;
+      margin-top: -40px;
+      font-size: 30px;
+      font-style: italic;
+      color: indigo;
+      text-shadow: 2px 2px hotpink;
+    }
+
+    #contact p5,p6,p7,p8{
+      margin-left: 10px;
+      font-weight: bold;
+      color: white;
+
+
+    }
+
+    #team{
+      border: 4px solid springgreen;
+      box-shadow: 5px 5px 5px lightseagreen inset, 10px 10px 5px indigo inset;
+      height: 300px;
+      background: #FF3366;
+      padding: 20px 20px;
+
+
+    }
+
+    #team h7{
+      text-align:center;
+      color:white;
+      margin-bottom: 50px;
+      font-size:30px;
+      font-style:italic;
+      text-shadow:4px 4px 5px black;
+      text-decoration-line:underline;
+    }
+    .one{
+      border : 2px solid black;
+      border-radius: 5px;
+      width: 200px;
+      position: relative;
+      overflow: hidden;
+      margin-left: 100px;
+      margin-top: 20px;
+
+
+    }
+
+    .two{
+      border : 2px solid black;
+      border-radius: 5px;
+      width: 200px;
+      position: relative;
+      overflow: hidden;
+      margin-left: 430px;
+      margin-top: -210px;
+      margin-right: 100px;
+
+
+    }
+
+    .three{
+      border : 2px solid black;
+      border-radius: 5px;
+      width: 200px;
+      position: relative;
+      overflow: hidden;
+      float: right;
+      margin-top: -210px;
+      margin-right: 100px;
+
+    }
+
+    .one img{
+      width: 100%;
+      height: auto;
+
+    }
+
+    .two img{
+      width: 100%;
+      height: auto;
+
+
+    }
+
+    .three img{
+      width: 100%;
+      height: auto;
+
+    }
+
+    .content{
+      color: white;
+      background: rgba(0,0,0,0.8);
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      transition: all 0.5s;
+    }
+
+    .one:hover .content{
+      top: 0;
+    }
+
+    .two:hover .content{
+      top: 0;
+    }
+    .three:hover .content{
+      top: 0;
+    }
+
+
+    #footer{
+          background:lightsalmon;
+          clear:both;
+          padding:10px 10px;
+          text-align:right;
+    }
+
+    @media screen and (max-width:1120px){
+      #main{
+        width: 800px;
+      }
+      #content{
+        width: 80%;
+      }
+      #sidebar{
+        width: 20%;
+      }
+    }
+
+    @media screen and (max-width:810px){
+      #main{
+        width: 500px;
+      }
+      #content{
+        width: auto;
+        float: none;
+      }
+      #sidebar{
+        width: auto;
+        float: none;
+      }
+    }
+
+    @media screen and (max-width:510px){
+      #main{
+        width: auto;
+      }
+      #content{
+        width: auto;
+        float: none;
+      }
+      #sidebar{
+        width: auto;
+        float: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+    <h1>Talent Hunt</h1>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="#content">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#team">Our Team</a></li>
+
+      </ul>
+    </div>
+    <div id="content">
+      <h2>US IT Staffing - We are <span>Hiring...</span></h2>
+      <p1>US Staffing is the process of hiring candidates for the US companies or clients by evaluating their skills, knowledge for a job position for which they are applying for. US IT Staffing Firm have a process of screening candidates by using tools to check candidates knowledge for a technology-specific role.US Staffing is a Talent Acquisition Industry which brings together HR Departments of the Clients, the VMS and the managers of staffing companies to hire the best talent for the vacant jobs in shortest possible time.</p1><br><br>
+      <p2>Us staffing is a good industry to work on. I am working from last 4 years in this industry.. so as per my experience I will definitely suggest this industry.. I learned workplace culture and how to handle different visas consultants. Good job to work with my colleagues and staff.</p2><br><br>
+      <p3>Staffing helps to find and hire people who are qualified for the job position and will benefit the company. It also improves the quality and quantity of work done by the company because they have staffed the optimum people. Job satisfaction rates are likely to increase because everyone is well-suited for their position and is happy to be doing their specialty of work. Higher rates of productive performance from the company are also common, as they have staffed the right people to do their jobs. It provides employees the opportunity for further growth and development.</p3>
+
+    </div>
+
+    <div id="sidebar">
+      <ul>
+        <li><a href="#content">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#team">Our Team</a></li>
+      </ul>
+    </div>
+
+    <div id="about">
+    <h3>About Us</h3>
+    <p4>Who We Are - Talent Hunt is an IT solutions and managed services provider for small and medium-sized businesses throughout the nation. As our motto, “Raising the Limits”, states, we believe in raising the limits in customer satisfaction, response times and knowledgeable solutions on all of our projects.<br>Talent Hunt is an award-winning IT Services and Solutions company specialized in the deployment and delivery of IT solutions. ... NET for custom software applications to transform into digital enterprises for the ultimate competitive advantage.</p4>
+    </div>
+
+    <div id="gallery">
+      <h4>Gallery</h4>
+      <img src="fonts/unnamed.png">
+      <img src="fonts/blog3.jpg">
+      <img src="fonts/download.png">
+    </div>
+
+    <div id="contact">
+      <h5>Contact Us</h5>
+      <h6>YUVRAJ SINGH</h6>
+      <p5>Manager Resource Specialist</p5><br>
+      <p6>Talent Hunt</p6><br>
+      <p7>41041 Trimboli way suite 1398 New York</p7><br>
+      <p8>Contact : 823-945-8309</p8>
+    </div>
+
+    <div id="team">
+      <h7>Our Team</h7>
+
+      <div class="one">
+        <img src="fonts/yuvraj.jpg">
+        <div class="content">
+          <h8>Yuvraj Singh</h8><br><br>
+          <p9>Sr. Manager - "The more you learn ,the more you get"</p9>
+        </div>
+
+      </div>
+
+      <div class="two">
+        <img src="fonts/utkarsh2.jpg">
+        <div class="content">
+        <h8>Utkarsh Singh</h8><br><br>
+        <p9>Manager - "Always look on the bright side of life"</p9>
+        </div>
+      </div>
+
+      <div class="three">
+        <img src="fonts/vivek.jpg">
+        <div class="content">
+          <h8>Vivek Singh</h8><br><br>
+          <p9>Chairman - "Action is the fundamental key to success"</p9>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="footer">
+      talenthunt@copyright 2020
+    </div>
+
+  </div>
+
+</body>
+</html>
